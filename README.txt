@@ -1,184 +1,207 @@
-# ИНСТРУКЦИЯ ПО УСТАНОВКЕ И ЗАПУСКУ TELEGRAM-БОТА ДЛЯ ПАРСИНГА
+🌐 Telegram Bot for Web Scraping
 
-## ДЛЯ WINDOWS
+Need to extract information from websites easily and automatically? This bot performs web scraping tasks, gathering data and sending it directly to you in Telegram!
+With this bot, you can automate the extraction of data from websites, such as product prices, reviews, or any publicly available content.
 
-### Шаг 1: Установка Python
-1. Скачайте Python 3.9.13 с официального сайта: https://www.python.org/downloads/release/python-3913/
-   - Прокрутите страницу вниз и выберите "Windows installer (64-bit)"
-   - Когда установщик запустится, ОБЯЗАТЕЛЬНО поставьте галочку "Add Python 3.9 to PATH"
-   - Нажмите "Install Now"
+✅ What does it do?
 
-2. Проверка установки:
-   - Нажмите кнопку Пуск → напишите "cmd" → откройте Командную строку
-   - Введите команду: python --version
-   - Должно показаться что-то вроде "Python 3.9.13"
+ • 🌍 Scrapes data from websites based on your specified criteria
+ • 📈 Collects and organizes information for easy access
+ • 📤 Sends the scraped data directly to you on Telegram
+ • 🗂️ Supports storing data in a structured format (e.g., CSV or JSON)
 
-### Шаг 2: Подготовка папки для бота
-1. Создайте на рабочем столе папку "telegram-bot"
-2. Скопируйте файлы "telegram_parser_bot.py" и "requirements.txt" в эту папку
+🔧 Features
 
-### Шаг 3: Получение токена бота
-1. Откройте Telegram
-2. Найдите @BotFather (это официальный бот для создания ботов)
-3. Напишите ему команду: /newbot
-4. Придумайте имя для бота
-5. Придумайте уникальное имя пользователя для бота (должно заканчиваться на "bot")
-6. BotFather даст вам токен бота - длинную строку символов
-7. СКОПИРУЙТЕ И СОХРАНИТЕ ЭТОТ ТОКЕН (он нужен для следующего шага)
+✅ Customizable scraping rules based on your needs
+✅ Supports scraping multiple websites
+✅ Real-time notifications when new data is available
+✅ Easy-to-use interface for managing scraping tasks
 
-### Шаг 4: Создание файла с токеном
-1. Откройте Блокнот
-2. Напишите в нём: BOT_TOKEN=ваш_токен_бота
-   (вместо "ваш_токен_бота" вставьте скопированный токен)
-3. Сохраните файл в папку "telegram-bot" с именем ".env"
-   - При сохранении выберите "Тип файла: Все файлы (*.*)"
-   - Важно: имя файла ДОЛЖНО быть именно ".env" (с точкой в начале)
+📩 Need data from websites on demand?
 
-### Шаг 5: Установка зависимостей
-1. Нажмите кнопку Пуск → напишите "cmd" → откройте Командную строку
-2. Введите команды (нажимайте Enter после каждой строки):
+Contact me on Telegram, and I’ll help you set up this bot to scrape the information you need! 🚀
+
+# INSTRUCTIONS FOR INSTALLING AND LAUNCHING A TELEGRAM BOT FOR PARSING
+
+## FOR WINDOWS
+
+### Step 1: Install Python
+1. Download Python 3.9.13 from the official website: https://www.python.org/downloads/release/python-3913 /
+- Scroll down and select "Windows installer (64-bit)"
+- When the installer starts, BE SURE to check the box "Add Python 3.9 to PATH"
+- Click "Install Now"
+
+2. Check the installation:
+- Click Start → type "cmd" → open the Command prompt
+   - Enter the command: python --version
+   - It should sound like "Python 3.9.13"
+
+### Step 2: Preparing the folder for the bot
+1. Create a telegram-bot folder on your desktop
+2. Copy the files "telegram_parser_bot.py " and "requirements.txt " to this folder
+
+### Step 3: Getting the Bot Token
+1. Open Telegram
+2. Find @BotFather (this is the official bot for creating bots)
+3. Write him a command: /newbot
+4. Come up with a name for the bot
+5. Come up with a unique username for the bot (must end with "bot")
+6. BotFather will give you a bot token - a long string of characters
+7. COPY AND SAVE THIS TOKEN (it is needed for the next step)
+
+### Step 4: Create a Token file
+1. Open the Notepad
+2. Write in it: BOT_TOKEN=your_token_bot
+   (insert the copied token instead of "your_token_bot")
+3. Save the file to the telegram-bot folder named ".env"
+- When saving, select "File type: All files (*.*)"
+- Important: the file name SHOULD be ".env" (with a dot at the beginning)
+
+### Step 5: Install Dependencies
+1. Click Start → type "cmd" → open the Command Prompt
+2. Enter the commands (press Enter after each line):
    ```
    cd Desktop\telegram-bot
    pip install -r requirements.txt
    ```
-3. Дождитесь окончания установки (это может занять несколько минут)
+3. Wait for the installation to finish (it may take a few minutes)
 
-### Шаг 6: Запуск бота
-1. В той же командной строке введите:
+### Step 6: Launch the Bot
+1. In the same command prompt, type:
    ```
    python telegram_parser_bot.py
    ```
-2. Если всё сделано правильно, вы увидите сообщения о запуске бота
-3. Бот запущен! НЕ ЗАКРЫВАЙТЕ командную строку, иначе бот остановится
+2. If everything is done correctly, you will see messages about the launch of the bot.
+3. The bot is running! DO NOT CLOSE the command line, otherwise the bot will stop.
 
-### Шаг 7: Использование бота
-1. Откройте Telegram
-2. Найдите своего бота по имени, которое вы задали
-3. Нажмите кнопку "Start" или отправьте команду /start
-4. Теперь вы можете использовать бота!
-   - /set_url - установить URL сайта для парсинга
-   - /parse - выполнить парсинг
-   - /help - получить справку
+### Step 7: Using the Bot
+1. Open Telegram
+2. Find your bot by the name you specified
+3. Press the "Start" button or send the command /start
+4. Now you can use the bot!
+   - /set_url - set the website URL for parsing
+   - /parse - perform parsing
+   - /help - get help
 
-### Если нужно остановить бота:
-- В командной строке нажмите комбинацию клавиш Ctrl+C
+### If you need to stop the bot:
+- Press Ctrl+C at the command prompt.
 
-### Если нужно запустить бота снова:
-1. Откройте командную строку
-2. Введите:
+### If you need to start the bot again:
+1. Open the command prompt
+2. Enter:
    ```
    cd Desktop\telegram-bot
    python telegram_parser_bot.py
    ```
 
-## ДЛЯ LINUX
+## FOR LINUX
 
-### Шаг 1: Установка Python и pip
-1. Откройте Терминал (обычно Ctrl+Alt+T)
-2. Введите следующие команды (нажимайте Enter после каждой строки):
+### Step 1: Install Python and pip
+1. Open a Terminal (usually Ctrl+Alt+T)
+2. Enter the following commands (press Enter after each line):
    ```
    sudo apt update
    sudo apt install python3.9 python3.9-venv python3-pip
    ```
-3. Проверьте установку:
-   ```
+3. Check the installation:
+``
    python3.9 --version
    ```
-   Должно показаться что-то вроде "Python 3.9.x"
+   It should sound like something like "Python 3.9.x"
 
-### Шаг 2: Подготовка папки для бота
-1. Создайте папку для бота:
+### Step 2: Preparing the folder for the bot
+1. Create a folder for the bot:
    ```
    mkdir ~/telegram-bot
    cd ~/telegram-bot
    ```
 
-2. Создайте файл с кодом бота:
+2. Create a file with the bot code:
    ```
    nano telegram_parser_bot.py
-   ```
-   - Вставьте код бота
-   - Для сохранения: Ctrl+O, затем Enter
-   - Для выхода: Ctrl+X
+``
+- Insert the bot code
+- To save: Ctrl+O, then Enter
+   - To exit: Ctrl+X
 
-3. Создайте файл с зависимостями:
-   ```
+3. Create a file with dependencies:
+``
    nano requirements.txt
-   ```
-   - Введите:
+``
+- Enter:
      ```
      aiogram>=3.0.0
-     requests==2.31.0
-     beautifulsoup4==4.12.2
-     python-dotenv==1.0.0
-     ```
-   - Для сохранения: Ctrl+O, затем Enter
-   - Для выхода: Ctrl+X
+requests==2.31.0
+beautifulsoup4==4.12.2
+python-dotenv==1.0.0
+``
+- To save: Ctrl+O, then Enter
+   - To exit: Ctrl+X
 
-### Шаг 3: Получение токена бота (так же как в Windows)
-1. Откройте Telegram
-2. Найдите @BotFather
-3. Отправьте ему команду: /newbot
-4. Придумайте имя для бота
-5. Придумайте уникальное имя пользователя (должно заканчиваться на "bot")
-6. СКОПИРУЙТЕ И СОХРАНИТЕ ТОКЕН, который даст вам BotFather
+### Step 3: Getting a bot token (just like in Windows)
+1. Open Telegram
+2. Find @BotFather
+3. Send him a command: /newbot
+4. Come up with a name for the bot
+5. Come up with a unique username (must end with "bot")
+6. COPY AND SAVE the TOKEN that BotFather will give you
 
-### Шаг 4: Создание файла с токеном
-1. Введите:
+### Step 4: Create a Token file
+1. Enter:
    ```
    nano .env
    ```
-2. Введите: BOT_TOKEN=ваш_токен_бота
-   (вместо "ваш_токен_бота" вставьте скопированный токен)
-3. Для сохранения: Ctrl+O, затем Enter
-4. Для выхода: Ctrl+X
+2. Enter: BOT_TOKEN=your_token_bot
+   (insert the copied token instead of "your_token_bot")
+3. To save: Ctrl+O, then Enter
+4. To exit: Ctrl+X
 
-### Шаг 5: Создание виртуального окружения и установка зависимостей
-1. Введите команды:
+### Step 5: Create a virtual environment and install dependencies
+1. Enter the commands:
    ```
    python3.9 -m venv venv
    source venv/bin/activate
    pip install -r requirements.txt
    ```
-2. Дождитесь окончания установки
+2. Wait for the installation to finish
 
-### Шаг 6: Запуск бота
-1. В терминале введите:
+### Step 6: Launch the Bot
+1. In the terminal, enter:
    ```
    python telegram_parser_bot.py
    ```
-2. Если всё сделано правильно, вы увидите сообщения о запуске бота
-3. Бот запущен! НЕ ЗАКРЫВАЙТЕ терминал, иначе бот остановится
+2. If everything is done correctly, you will see messages about the launch of the bot.
+3. The bot is running! DO NOT CLOSE the terminal, otherwise the bot will stop.
 
-### Шаг 7: Использование бота
-1. Откройте Telegram
-2. Найдите своего бота по имени, которое вы задали
-3. Нажмите кнопку "Start" или отправьте команду /start
-4. Теперь вы можете использовать бота!
-   - /set_url - установить URL сайта для парсинга
-   - /parse - выполнить парсинг
-   - /help - получить справку
+### Step 7: Using the Bot
+1. Open Telegram
+2. Find your bot by the name you specified
+3. Press the "Start" button or send the command /start
+4. Now you can use the bot!
+   - /set_url - set the website URL for parsing
+   - /parse - perform parsing
+- /help - get help
 
-### Если нужно остановить бота:
-- В терминале нажмите комбинацию клавиш Ctrl+C
+### If you need to stop the bot:
+- Press Ctrl+C in the terminal.
 
-### Если нужно запустить бота снова:
-1. Откройте терминал
-2. Введите:
+### If you need to start the bot again:
+1. Open the terminal
+2. Enter:
    ```
    cd ~/telegram-bot
    source venv/bin/activate
    python telegram_parser_bot.py
    ```
 
-## РЕШЕНИЕ ВОЗМОЖНЫХ ПРОБЛЕМ
+## SOLVING POSSIBLE PROBLEMS
 
-### "Python не найден" на Windows
-1. Проверьте, стоит ли галочка "Add Python to PATH" при установке
-2. Если уже установили без этой галочки, запустите установщик снова и выберите "Modify"
+### "Python not found" on Windows
+1. Check if the "Add Python to PATH" checkbox is worth checking during installation
+2. If you have already installed it without this check mark, run the installer again and select "Modify"
 
-### "Не удаётся установить зависимости" на Windows или Linux
-1. Попробуйте установить их по одной:
+### "Cannot install dependencies" on Windows or Linux
+1. Try to install them one at a time:
    ```
    pip install aiogram
    pip install requests
@@ -186,23 +209,23 @@
    pip install python-dotenv
    ```
 
-### "Не удаётся подключиться к Telegram" на Windows или Linux
-1. Проверьте интернет-соединение
-2. Проверьте правильность токена в файле .env
-3. Если используете прокси, возможно, нужны дополнительные настройки
+### "Unable to connect to Telegram" on Windows or Linux
+1. Check your internet connection
+2. Check the validity of the token in the .env file
+3. If you use a proxy, you may need additional settings.
 
-### Бот не отвечает в Telegram
-1. Убедитесь, что командная строка/терминал с ботом открыты и работают
-2. Попробуйте перезапустить бота
-3. Попробуйте отправить команду /start
+### Bot is not responding in Telegram
+1. Make sure that the command prompt/terminal with the bot is open and running
+2. Try restarting the bot
+3. Try to send the command /start
 
-### КАК ПОЛЬЗОВАТЬСЯ БОТОМ
+### HOW TO USE THE BOT
 
-1. Отправьте боту команду /set_url
-2. Бот попросит ввести адрес сайта. Введите полный URL (например, https://www.example.com)
-3. После установки URL отправьте команду /parse
-4. Бот начнёт парсинг сайта и отправит вам результаты:
-   - Заголовок страницы
-   - Основные ссылки на странице
-   - Текстовое содержимое
-5. Для смены сайта снова используйте команду /set_url
+1. Send the /set_url command to the bot
+2. The bot will ask you to enter the website address. Enter the full URL (for example, https://www.example.com )
+3. After setting the URL, send the command /parse
+4. The bot will start parsing the site and send you the results.:
+   - Page title
+- Main links on the page
+- Text content
+5. To change the site, use the /set_url command again.
